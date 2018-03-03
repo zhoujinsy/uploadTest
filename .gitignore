@@ -1,0 +1,9 @@
+# 忽略子目录下的文件夹
+**/.settings
+**/target
+.settings/*
+
+# 忽略子目录下的文件
+**.classpath
+**.project
+**/bin

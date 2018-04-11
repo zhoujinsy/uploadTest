@@ -1,9 +1,12 @@
 # 忽略子目录下的文件夹
-*/.settings
+.settings/
 */target
-.settings/*
+bin/
+.git/
 
 # 忽略子目录下的文件
+*/.settings/*
+*/.git/*
 *.classpath
 *.project
 */bin/*

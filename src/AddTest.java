@@ -2,6 +2,9 @@
 public class AddTest implements MathTest{
 	public int add(int a,int b){
 		int g=6;
+		int d=55 ;
+		int c=0;
+		d=15;
 		return a+b;
 		
 	}

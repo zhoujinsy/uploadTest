@@ -13,10 +13,30 @@ public class LockTest {
 	public Condition condition3=lock.newCondition();
 	
 	public static void main(String[] args) {
-		LockTest lockTest=new LockTest();
-		MyThread1 myThread1=new MyThread1(lockTest);
-		MyThread2 myThread2=new MyThread2(lockTest);
-		MyThread3 myThread3=new MyThread3(lockTest);
+		final LockTest lockTest=new LockTest();
+		Thread myThread1=new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				lockTest.sellTicket1(Thread.currentThread());				
+			}
+		});
+		Thread myThread2=new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				lockTest.sellTicket2(Thread.currentThread());
+				
+			}
+		});
+		Thread myThread3=new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				lockTest.sellTicket3(Thread.currentThread());
+				
+			}
+		});
 		myThread1.start();
 		myThread2.start();
 		myThread3.start();
@@ -87,7 +107,7 @@ public class LockTest {
 		}
 	}
 }
-
+/*
 class MyThread1 extends Thread{
 	LockTest lockTest;
 	public MyThread1(LockTest lockTest){
@@ -120,4 +140,4 @@ class MyThread3 extends Thread{
 	public void run() {
 		lockTest.sellTicket3(Thread.currentThread());
 	}
-}
+}*/

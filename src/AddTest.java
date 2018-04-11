@@ -1,6 +1,7 @@
 
 public class AddTest implements MathTest{
 	public int add(int a,int b){
+		int c=0;
 		return a+b;
 		
 	}

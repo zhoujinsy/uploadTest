@@ -1,5 +1,5 @@
 
-public class EnhancerMethod {
+public class EnhancerMethod{
 	public void logBefore(Class<?> clazz){
 		System.out.println(clazz.getName()+"已经被加载,增强方法即将被执行");
 	}

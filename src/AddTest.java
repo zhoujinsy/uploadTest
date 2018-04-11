@@ -5,7 +5,7 @@ public class AddTest implements MathTest{
 		int d=55 ;
 		int c=0;
 		d=24;
-		int e=24;
+		int e=30;
 		return a+b;
 		
 	}
